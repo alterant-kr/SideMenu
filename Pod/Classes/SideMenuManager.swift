@@ -134,6 +134,9 @@ open class SideMenuManager: NSObject {
     /// Forces menus to always animate when appearing or disappearing, regardless of a pushed view controller's animation.
     open var menuAlwaysAnimate = false
     
+    /// Forces menus to prevent hiding after status bar frame changed
+    open var disableStatusBarChangeNotification = true
+
     /// Default instance of SideMenuManager.
     public static let `default` = SideMenuManager()
     

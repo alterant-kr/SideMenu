@@ -358,6 +358,10 @@ open class SideMenuTransition: UIPercentDrivenInteractiveTransition {
     }
     
     @objc internal func handleNotification(notification: NSNotification) {
+        if sideMenuManager.disableStatusBarChangeNotification {
+            return
+        }
+        
         guard menuViewController?.presentedViewController == nil &&
             menuViewController?.presentingViewController != nil else {
                 return
